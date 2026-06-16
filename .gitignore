@@ -1,0 +1,14 @@
+
+m
+*.out
+*.exe
+
+*.o
+*.obj
+
+
+.vscode/
+
+
+*~
+*.swp
