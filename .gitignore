@@ -6,7 +6,7 @@ m
 *.o
 *.obj
 
-
+temp/
 .vscode/
 
 
