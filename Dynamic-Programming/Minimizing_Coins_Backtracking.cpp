@@ -3,7 +3,7 @@ using namespace std;
 
 typedef long long ll;
 
-int helper(const vector<ll>& c, ll x, ll cnt, ll& ans,vector<ll> &dp) {
+int helper(const vector<ll>& c, ll x, ll cnt, ll& ans) {
 
     if(x == 0) {
         ans = min(ans, cnt);
@@ -25,7 +25,7 @@ int main() {
 
     vector<ll> c(n);
 
-    vector<ll> dp(x+1,-1);
+    // vector<ll> dp(x+1,-1);
 
     for(int i = 0; i < n; i++) {
         cin >> c[i];
@@ -33,7 +33,7 @@ int main() {
 
     ll ans = LLONG_MAX;
 
-    helper(c, x, 0, ans,dp);
+    helper(c, x, 0, ans);
 
     if(ans == LLONG_MAX)
         cout << -1;
