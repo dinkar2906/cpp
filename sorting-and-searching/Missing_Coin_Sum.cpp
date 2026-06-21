@@ -8,7 +8,7 @@ int main() {
     cin >> n;
 
     vector<intt> x;
-
+    
     for (intt i = 0; i < n; i++)
     {
         intt a;
