@@ -8,11 +8,8 @@ const intt INV2 = 500000004;
 
 intt sumRange(intt l, intt r) {
 
-    l %= MOD;
-    r %= MOD;
-
     intt cnt = (r - l + 1) % MOD;
-    intt sum = (l + r) % MOD;
+    intt sum = ((l % MOD) + (r % MOD)) % MOD;
 
     return (((sum * cnt) % MOD) * INV2) % MOD;
 }
