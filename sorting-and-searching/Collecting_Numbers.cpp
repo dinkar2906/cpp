@@ -4,36 +4,37 @@ using namespace std;
 using intt = long long;
 
 void solve() {
-    intt n;
-    cin>>n;
 
-    vector<intt> v(n,0);
-    for (intt i = 0; i < n; i++)
-    {
-        cin>>v[i];
+    intt n;
+    cin >> n;
+
+    vector<intt> pos(n + 1);
+
+    for(intt i = 0; i < n; i++) {
+
+        intt x;
+        cin >> x;
+
+        pos[x] = i;
     }
 
-    intt cnt = 0;
-    intt temp = 1;
-    for (intt i = 0; i < n; i++)
-    {
-        if(v[i]==temp || v[i]==temp+1){
-            temp++;
+    intt rounds = 1;
+
+    for(intt i = 1; i < n; i++) {
+
+        if(pos[i] > pos[i + 1]) {
+            rounds++;
         }
     }
-    
-    
-    
-}   
+
+    cout << rounds << '\n';
+}
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t = 1;
-    // cin >> t;
-
-    while (t--) solve();
+    solve();
 
     return 0;
 }
