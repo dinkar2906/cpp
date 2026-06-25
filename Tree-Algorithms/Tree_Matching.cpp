@@ -5,6 +5,22 @@ using intt = long long;
 
 void solve() {
     
+    intt n;
+    cin>>n;
+
+    vector<vector<intt>> adj(n+1);
+
+    for (intt i = 1; i < n+1; i++)
+    {
+        intt a,b;
+        cin>>a>>b;
+
+        adj[a].push_back(b);
+        adj[b].push_back(a);            
+
+    }
+    
+
 }
 
 int main() {
@@ -17,4 +33,4 @@ int main() {
     while (t--) solve();
 
     return 0;
-}   
+}
