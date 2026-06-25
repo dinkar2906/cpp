@@ -7,6 +7,27 @@ void solve() {
     intt n;
     cin>>n;
 
+    multiset<intt> st;
+
+    for (intt i = 0; i < n; i++)
+    {
+        intt temp;
+        cin>>temp;
+        
+        auto it = st.upper_bound(temp);
+        if(it == st.end()){
+            st.insert(temp);
+        }else{
+            st.erase(it);
+            st.insert(temp);
+        }
+
+
+    }
+
+    
+    cout<<st.size()<<endl;
+
     
 }
 
